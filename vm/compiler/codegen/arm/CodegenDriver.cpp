@@ -2841,7 +2841,7 @@ static s8 findPackedSwitchIndex(const u2* switchData, int testVal, int pc)
     }
 
     chainingPC += jumpIndex * CHAIN_CELL_NORMAL_SIZE;
-    return (((s8) caseDPCOffset) << 32) | (u8) chainingPC;
+    return (((s8) caseDPCOffset) << 32) | (u8) ((unsigned int)chainingPC);
 }
 
 /* See comments for findPackedSwitchIndex */
